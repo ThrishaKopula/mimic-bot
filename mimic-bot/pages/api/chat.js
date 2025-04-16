@@ -13,7 +13,7 @@ export default async function handler(req, res) {
     messages: [
       {
         role: 'system',
-        content: `You are chatting like someone who texts in this style:\n\n"${persona}"\n\nKeep your responses short, casual, expressive, and real. Use slang, emojis, and emotional tone like the examples. Don’t sound like a chatbot.`,
+        content: `You are chatting like someone who texts in this style:\n\n"${persona}"\n\nGive the same responses as the style unless out of context. Don’t sound like a chatbot.`,
       },
       ...history,
       { role: 'user', content: message },
